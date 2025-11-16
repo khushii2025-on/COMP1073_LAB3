@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Range Rover Sport – Toy Car Constructor Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Range Rover Sport SUV – Diecast Model (1:18)</h1>
+    <p>Object constructor demo using the Bburago 12069 toy car.</p>
+  </header>
+
+  <main class="container">
+    
+    <section class="card" id="car-card">
+      <div class="card-image">
+        
+        <img src="images/range-rover-12069.jpg"
+             alt="Range Rover Sport SUV diecast model in black"
+             id="car-image" />
+      </div>
+
+      <div class="card-content">
+        <h2 id="car-name"></h2>
+        <p class="subtitle" id="car-brand"></p>
+
+        <div class="badge-row">
+          <span class="badge" id="car-scale"></span>
+          <span class="badge" id="car-color"></span>
+          <span class="badge badge-stock" id="car-stock"></span>
+        </div>
+
+        <p class="price">
+          Price: <span id="car-price"></span>
+        </p>
+
+        <h3>Key Specs</h3>
+        <ul class="spec-list">
+          <li><strong>Material:</strong> <span id="car-material"></span></li>
+          <li><strong>Dimensions:</strong>
+            <span id="car-dimensions"></span>
+          </li>
+          <li><strong>Packaging:</strong> <span id="car-packaging"></span></li>
+          <li><strong>Opening parts:</strong>
+            <span id="car-opening-parts"></span>
+          </li>
+          <li><strong>Sunroof:</strong> <span id="car-sunroof"></span></li>
+          <li><strong>Rating:</strong> <span id="car-rating"></span> / 5</li>
+          <li><strong>Product code:</strong> <span id="car-product-id"></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card controls-card">
+      <h2>Play with the Object</h2>
+
+      <div class="control-group">
+        <label for="discount-input">
+          Apply discount (%): <span id="discount-label">0</span>%
+        </label>
+        <input type="range" id="discount-input" min="0" max="50" value="0" />
+        <button id="apply-discount-btn">Apply Discount</button>
+      </div>
+
+      <div class="control-group">
+        <label for="new-color-input">Change car color (object property):</label>
+        <input type="text" id="new-color-input" placeholder="e.g. Metallic Black" />
+        <button id="update-color-btn">Update Color</button>
+      </div>
+
+      <div class="control-group">
+        <button id="toggle-stock-btn">Toggle In-Stock Status</button>
+      </div>
+
+      <p class="hint">
+        All of these controls modify properties on the
+        <code>DiecastCar</code> object instance in JavaScript.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Current Object State</h2>
+      <p>Live JSON view of the toy car object:</p>
+      <pre id="car-json" class="json-view"></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Assignment: Object Constructor – ModelToyCars.com • Demo only</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
